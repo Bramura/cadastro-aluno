@@ -1,0 +1,196 @@
+/* Reset básico para garantir consistência entre os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do documento */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #a2c9e3;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 50px;
+    margin-top: 5px;
+}
+
+/* Formulário */
+#forms1 {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Labels */
+label {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Inputs e Select */
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao focar nos inputs */
+input:focus,
+select:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+    outline: none;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito de hover e foco nos botões */
+button:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid #3498db;
+}
+
+/* Botão "Salvar Alteração" centralizado */
+#btnContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#btnSalvarAlteracao {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito de hover - muda a cor de fundo quando o mouse passa sobre o botão */
+#btnSalvarAlteracao:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Estilo quando o botão é desabilitado (não exibido inicialmente) */
+#btnSalvarAlteracao:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* Tabela (caso o botão "Listar" gere uma tabela) */
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+    font-size: 1rem;
+}
+
+table th {
+    background-color: #2980b9;
+    color: #fff;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: #f4f6f9;
+}
+
+table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo de links */
+a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #3498db;
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        #forms1 {
+            padding: 20px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        button {
+            font-size: 1rem;
+        }
+
+        table th,
+        table td {
+            font-size: 0.9rem;
+            padding: 8px;
+        }
+    }
+}
